@@ -23,7 +23,7 @@ import com.google.gson.JsonObject;
 
 @RestController
 @RequestMapping("/v1")
-public class StudentController {
+public class AccountController {
     
 	@Autowired
 	private AccountService accountService;
