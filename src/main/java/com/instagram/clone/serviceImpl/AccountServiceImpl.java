@@ -41,6 +41,8 @@ public class AccountServiceImpl implements AccountService{
 	public List<AccountDto> findAll() throws Exception {
 		
 		// List<Entity> to List<DTO>
+		
+		System.out.println(accountRepository.findAll());
 		return mapper.map(accountRepository.findAll(),  new TypeToken<List<AccountDto>>(){}.getType());
 	}
 
