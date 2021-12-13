@@ -6,6 +6,8 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
+import com.instagram.clone.common.BaseTime;
+
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
@@ -20,24 +22,24 @@ import javax.validation.constraints.NotBlank;
 
 @Getter
 @Setter
-public class AccountDto {
+public class AccountDto extends BaseTime{
 
 	@NonNull
+	@Column(name="account_seq")
 	private Long accountSeq;
 	
 	@NonNull
+	@Column(name="account_id")
 	private String accountId;
 	
 	@NonNull
 	private String password;
 
 	private String t1;
-
+	
+	@Column(name="reg_type")
 	private String regType;
 	
-	private Date createdAt;
-
-	private Date updatedAt;
 	
 	
 }
